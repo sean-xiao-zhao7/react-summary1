@@ -1,6 +1,11 @@
 import { PostType } from "../../types/PostType";
-import { StyledPaper } from "../containers/StyledPaper";
+import { StackItem } from "../containers/StackItem";
 
 export default function SinglePostPreview({ post }: { post: PostType }) {
-    return <StyledPaper>{post.title}</StyledPaper>;
+    return (
+        <StackItem>
+            <p>{post.title}</p>
+            <p>{post.body}</p>
+        </StackItem>
+    );
 }
